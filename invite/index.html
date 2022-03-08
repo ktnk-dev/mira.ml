@@ -6,105 +6,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мира ♡</title>
 <link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/header.css">
+
 <style>
 body{
     margin: 0;padding: 0;
     background-color: #1b1a1a;
 }
-header{
-    position: fixed;
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.minimal {
+    color: #999;
     width: 100%;
-    height: 50px;
-    background-color: #000;
+    text-align: center;
+    font-family: Fira Code;
+    margin-top: 50px;
+}
+
+
+.main-sol {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    font-family: Fira Code ,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-content: center;
+}
 
-    top: 0;
+.sol{
+    width: 500px;
+    margin: 15px;
+    background-color: #292929;
+    border-radius: 5px;
+    border: #1b1a1a 2px solid;
+    transition: all .4s;
 
+}
+.standart:hover{
+    border: #ccc 2px solid;
 
 
 }
-.logo-mobile{
-    display: none;
+.full:hover{
+    border: #ff8282 2px solid;
+
+
 }
-.logo{
+
+
+h1{
+    font-size: 20px;
     margin: 0;
-    padding: 13px 20px;
-    color: #ff8282;
-    transition: all .3s;
-    border-bottom: rgba(0,0,0,0) 2px solid;
-
-}
-#logo-active{
-    border-bottom: #ff8282 2px solid;
-
-}
-.logo:hover{
-    color: #000;
-    background-color: #ff8282;
-
-}
-.list-tab{
-    display: flex;
+    padding: 10px 5px 0;
+    border-radius: 5px;
+    text-align: center;
     color: #eee;
+    font-family: Fira Code;
+    background-color: #2f2e2e;
 }
-.l-item{
-    padding: 13px 20px;
-    transition: all .3s;
-    border-bottom: rgba(0,0,0,0) 2px solid;
-
-}
-.l-i-active{
-    border-bottom: #fff 2px solid;
-
-}
-.l-item:hover{
-    color: #000;
-    background-color: #fff;
+.rec{
+    margin: 0;padding: 0;
+    font-size: 10px;
+    font-weight: 100;
+    color: #888;
 }
 
-
-.list-tab-mobile{
-    display: none;
+.info {
+    padding: 0 12px;
+    text-align: center;
+    color: #ccc;
+    font-family: Bad Script;
+    font-size: 17px;
 }
-
-
-
-.main {
-    padding-top: 50px;
+.underline{
+    padding: 0 0;
+    text-decoration: underline;
+    color: #ccc;
+    font-family: Bad Script;
 }
+.nrec{
+    margin: 0;padding: 0;
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.exm{
+    color: #eee;
+    padding: 3px 15px 5px;
+    font-family: Bad Script;
+    background-color: #272626;
+    margin-bottom: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    background-color: #272626;
+    color: #ccc;
+    font-family: Fira Code;
+    font-size: 13px;
+    font-weight: 100;
+    padding-bottom: 10px;
+    list-style: none;
 
-
-
-
-@media(max-width: 609px) {
-    .logo-mobile{
-        display: block;
-    }
-    .logo-desktop{
-        display: none;
-    }
-    .logo{
-        padding: 13px 19px;
-    }
-    .list-tab-desktop{
-        display: none;
-    }
-    .list-tab-mobile{
+    
+}
+li{
+    padding: 5px 0 5px;
+    padding-left: 10px;
+}
+li:hover{
+    background-color: #242323;
+}
+@media(max-width: 620px) {
+    .main{
         display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
     }
-    .l-cmd{
-        padding: 13px 21.7px;
+    .main-sol{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
     }
-  
-
+    .sol{
+        width: auto;
+    }
+    
+    
+    
 }
-
-
-
+.add{
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 2.4px 2.4px;
+    background-color: #2f2e2e;
+    font-family: Fira Code;
+    font-weight: 100;
+    transition: all .4s;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.add-t{
+    color: #eee;
+    width: 100%;
+    padding: 10px 0 0;
+    transition: all .4s;
+}
+.add-standart:hover{
+    background-color: #ccc;
+    color: black;
+}
+.add-full:hover{
+    background-color: #ff8282;
+    color: black;
+}
+.ulink{
+    color: #eee;
+    text-decoration: underline;
+}
+.info-stdr{
+    padding: 0 14px;
+}
+@media(max-width: 658px) {
+    .info-stdr{
+        padding: 0 10px;
+    }
+    
+}
 </style>
 </head>
 <body>
@@ -127,6 +202,33 @@ header{
         
     </header>
     <section class="main">    
+        <div class="main-sol">
+            <div class="sol standart">
+                <h1> Обычные разрешения <p class="rec"><br></p> </h1>
+                <p class="info info-stdr">Используя обычные разрешения, можно комфортно использовать функционал <a class="underline">не</a> для модерации вашего сервера.</p>
+                <p class="exm">Например:</p>
+                <ul>
+                    <li>• Использовать Вебхук</li>
+                    <li>• Создавать пользовательсике каналы</li>
+                    <li>• Управление музыкой</li>
+                    <li>• Ведение аудита</li>
+                </ul>
+                <div class="add"><a class="add-t add-standart" href="https://discord.com/api/oauth2/authorize?client_id=766313121194967080&permissions=412857265744&scope=bot"> Пригласить </a></div>
+            </div>
+            <div class="sol full">
+                <h1> Полные разрешения<p class="rec">(рекомендуется)</p></h1>
+                <p class="info">С полными разрешениями вы можете использовать функции <a class="underline">для</a> модерации сервера, а также получить бонусы~</p>
+                <p class="exm">Небольшой пример:</p>
+                <ul>
+                    <li>• Выдача ролей по эмодзи/команде</li>
+                    <li>• Бан или кик участников сервера</li>
+                    <li>• Аналитика приглашений и рефералок</li>
+                    <li>• <a href="/api/redirect/?to=https://link.mira.ml/" class="ulink">Собственная ссылка на ваш сервер</a> </li>
+                </ul>
+                <div class="add add-full"><a class="add-t add-full" href="https://discord.com/api/oauth2/authorize?client_id=766313121194967080&permissions=1529846557910&scope=bot"> Пригласить </a></div>
+            </div>
+        </div>
+        <!-- <div class="minimal"><a class="minimal" href="minimal/"> Добавить с минимальными разрешениями </a> <p href="" class="minimal nrec">(не рекомендуется)</p></div> -->
         
     </section>
 </body>
