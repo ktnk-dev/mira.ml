@@ -4,20 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/fonts.css">
+
     <title>Redirect</title>
 <style>
 body{
+    font-family: Fira Code;  
     background-color: #000;
     margin: 0;padding: 0;
-    
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-content: center; 
+    transition: all .4s;
+}
+h2{
+    color: #888;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+a{
+    font-family: monospace;
+    font-weight: 100;
+    transition: all .6s;
+    color: #eee;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+}
+#arg{
+    color: #888;
+    font-size: 18px;
 }
 </style>
 </head>
 <body>
+    <h2 id="rdt"></h2>
+    <a id="url"></a>
+    <a id="arg"></a>
+    <a id="alr">Включите Javascript для этого домена</a>
+
 
 <script>
-    q = new URLSearchParams(location.search).get("to")
-    window.location = q
+    document.getElementById("alr").remove()
+    a = document.getElementById("rdt")
+    a.innerHTML = "Переход на внешний сайт"
+
+    r = location.search.slice(4)
+    s = r.split("?")
+    a = document.getElementById("url")
+    a.innerHTML = s[0]
+    a.href = r
+    
+    a = document.getElementById("arg")
+    a.innerHTML = "?"+s[1]
+  
+
+    // prompt(r)
+    window.location = r
 </script>
 </body>
 </html>
