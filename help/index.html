@@ -8,11 +8,227 @@
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="stylesheet" href="/css/header.css">
 <style>
-body{
-    margin: 0;padding: 0;
-    background-color: #1b1a1a;
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 15px;
+
 }
 
+
+.list{
+    display: flex;
+    flex-direction: column;
+}
+.category{
+    background: #222020;
+    color: white;
+    border: #1b1a1a 2px solid;
+    transition: all .4s;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.category:hover{
+    border: #999 2px solid;
+
+}
+
+.cat-name{
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-family: Bad Script;
+    background-color: #2f2d2d;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 0;padding: 5px 0 2px;
+
+}
+.cmd{
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: auto;
+    transition: all .3s;
+    border-top: #2f2d2d 1px solid;
+}
+.cmdi{
+    padding: 5px 10px;
+
+    
+}
+.cmd:hover{
+    background-color: #292727;
+    /* border-top: #2f2d2d 1px solid; */
+
+
+}
+.name{
+    background-color: #292727;
+    text-align: end;
+    font-family: Amatic SC;
+    /* font-weight: normal; */
+    font-size: 30px;
+}
+.descr{
+    font-family: Caveat;
+    font-weight: 100;
+    padding-top: 5px;
+    font-size: 27px;
+    border-top: #292727 1px solid;
+
+    display: grid;
+    grid-template-columns: auto 40px;
+    grid-template-rows: 100%;
+
+    min-height: 40px;
+
+}
+.last-cmd{
+    border-radius: 0 0 5px 5px;
+}
+.last-name{
+    border-radius: 0 0 5px 5px;
+
+}
+.cat-end{
+    height: 2.0px;
+    background-color: #1b1a1a;
+    border-radius: 0 0 5px 5px;
+    display: none;
+}
+.help-n{
+    display: none;
+
+}
+.help-b{
+    background-color: #2f2d2d;
+    text-align: center;
+    font-family: Fira Code;
+    padding-top: 8.5px;
+    font-size: 17px;
+    border-radius: 50%;
+    min-height: 31px;
+    max-height: 31px;
+
+}
+@media(max-width: 609px){
+    /* .cat-name{
+        font-size: 20px;
+        margin: 0;padding: 5px 0 2px;
+    } */
+    .cmd{
+        grid-template-columns: 100%;
+        grid-template-rows: 43px auto;
+        margin: 0 0 20px;
+        
+    }
+    .name{
+        
+        padding: 0;margin: 0;
+        padding: 1px 10px;
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto 40px;
+    }
+    .cat-end{
+        display: none;
+    }
+    .help-n{
+        display: block;
+        margin-top: 5px;
+    }
+    .help-b{
+        padding: 7px;
+        font-size: 14px;
+        width: 18px;
+        min-height: 18px;
+        max-height: 18px;
+
+    }
+    .descr{
+        grid-template-columns: 100%;
+    }
+    .help-d{
+        display: none;
+    }
+
+}
+
+@media(min-width: 1300px){
+    .category{
+        min-width: 600px;
+        width: 40%;
+        height: min-content;
+        margin: 10px 10px;
+    }
+    .list{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+.h-back{
+    margin-left: 30px;
+    color: #ccc;
+    font-family: Fira Code;
+    padding: 10px 20px;
+    width: 77px;
+    border-radius: 5px;
+    transition: all .4s;
+    font-weight: normal;
+    background-color: #201f1f;
+
+}
+.h-back:hover{
+    background-color: #282626;
+    color: white;
+
+}
+.h-role{
+    margin: 50px 30px 0;
+    background-color: #302f2f;
+    color: #eee;
+    padding: 5px 10px;
+    font-family: Fira Code;
+    border-radius: 5px;
+    font-weight: 100;
+    font-size: 15px;
+    max-width: max-content;
+}
+
+.h-descr{
+    margin: 0 30px;
+    font-size: 30px;
+    color: #eee;
+    font-weight: 100;
+    font-family: Caveat;
+}
+.h-example{
+    background-color: #252424;
+    margin: 40px 30px;
+    padding: 0.01px 10px;
+    border-radius: 5px;
+
+}
+.he-t{
+    font-family: Amatic SC;
+    font-weight: 100;
+    color: #999;
+    font-size: 27px;
+    margin-left: 20px;
+}
+.he-r{
+    color: #ddd;
+    margin-left: 20px;
+    font-family: Fira Code;
+    /* font-size: 30px; */
+    margin-bottom: 30px;
+}
 
 </style>
 </head>
@@ -24,19 +240,83 @@ body{
 
 
         <div class="list-tab list-tab-desktop">
-            <div class="l-cmd l-item l-i-active" onclick="window.location='/help/'">Команды ✎</div>
+            <div class="l-cmd l-item l-i-active" onclick="window.location='/help/'">Команды ♢</div>
             <div class="l-inv l-item" onclick="window.location='/invite/'">Пригласить ★</div>
             <div class="l-api l-item" onclick="window.location='/api/'">API ⌘</div>
         </div>
         <div class="list-tab list-tab-mobile">
-            <div class="l-cmd l-item l-i-active" onclick="window.location='/help/'">✎</div>
+            <div class="l-cmd l-item l-i-active" onclick="window.location='/help/'">♢</div>
             <div class="l-inv l-item" onclick="window.location='/invite/'">★</div>
             <div class="l-api l-item" onclick="window.location='/api/'">⌘</div>
         </div>
         
     </header>
-    <section class="main">    
+    <div id="nojs">Включите пожалуйста Javascript</div>  
+    <section class="main">
+        <div class="help">
+
+
+        </div>
+        <div class="list">
+           
+        </div>  
         
     </section>
+<script src="/js/load.js"></script>
+<script src="./commands.js"></script>
+<script>
+if (ishelp == false){
+    
+    for (let i = 0; i < commands.keys.length; i++) {
+        const category = commands.keys[i];
+        console.log(`\n==== ${category} =====`);
+        catdiv = document.createElement('div')
+        catdiv.classList.add("category")
+        catname = document.createElement('h3')
+        catname.classList.add('cat-name'); catname.innerHTML = category
+        catdiv.appendChild(catname)
+
+        for (let j = 0; j < commands[category].length; j++) {
+            
+            const cmd_d = commands[category][j];
+            console.log(`${cmd_d[0]} -- ${cmd_d[1]}`);
+
+            cmd = document.createElement('div')
+            cmd.classList.add('cmd')
+            c_name = document.createElement('div')
+            c_name.classList.add('cmdi', 'name'); c_name.innerHTML = cmd_d[0]
+            c_descr = document.createElement('div')
+            c_descr.classList.add('cmdi','descr'); c_descr.innerHTML = cmd_d[1]
+
+            if (cmd_d[2] != "none" && cmd_d[2] != "" && cmd_d[2] != undefined ){
+                cmd.onclick = function(){
+                    window.location = cmd_d[2]
+                }
+                helpb = document.createElement('div')
+                helpb.innerHTML = "?"
+                helpb.classList.add('help-b','help-n')
+                c_name.appendChild(helpb)
+
+                helpb = document.createElement('div')
+                helpb.innerHTML = "?"
+                helpb.classList.add('help-b','help-d')
+                c_descr.appendChild(helpb)
+            }
+
+            if (j == commands[category].length-1){
+                cmd.classList.add('last-name')
+                c_name.classList.add('last-name')
+                c_descr.classList.add('last-name')
+            }
+
+            cmd.appendChild(c_name)
+            cmd.appendChild(c_descr)
+            catdiv.appendChild(cmd)
+        }
+        document.getElementsByClassName("list")[0].appendChild(catdiv)
+        
+    }
+}
+</script>
 </body>
 </html>

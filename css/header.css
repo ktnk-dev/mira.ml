@@ -1,3 +1,9 @@
+body{
+  margin: 0;padding: 0;
+  background-color: #1b1a1a;
+}
+
+
 header{
   position: fixed;
   width: 100%;
@@ -14,6 +20,7 @@ header{
 
 
 }
+
 .logo-mobile{
   display: none;
 }
@@ -86,4 +93,18 @@ header{
   .l-cmd{
       padding: 13px 21.7px;
   }
+}
+
+
+#nojs{
+  z-index: 1000;
+  position: fixed;
+  background-color: #ff3333;
+  color: white;
+  height: 37px;
+  padding: 13px 0 0;
+  text-align: center;
+  font-family: Fira Code;
+  width: 100%;
+  top: 0;
 }

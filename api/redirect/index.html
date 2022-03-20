@@ -60,9 +60,14 @@ a{
     a = document.getElementById("url")
     a.innerHTML = s[0]
     a.href = r
-    
+
     a = document.getElementById("arg")
-    a.innerHTML = "?"+s[1]
+    if (s[1] == undefined){
+        a.innerHTML = ""
+    } else{
+
+        a.innerHTML = "?"+s[1]
+    }
   
 
     // prompt(r)

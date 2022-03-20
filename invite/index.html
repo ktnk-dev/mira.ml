@@ -9,10 +9,7 @@
 <link rel="stylesheet" href="/css/header.css">
 
 <style>
-body{
-    margin: 0;padding: 0;
-    background-color: #1b1a1a;
-}
+
 
 a{
     text-decoration: none;
@@ -40,7 +37,7 @@ a{
 .sol{
     width: 500px;
     margin: 15px;
-    background-color: #292929;
+    background-color: #292727;
     border-radius: 5px;
     border: #1b1a1a 2px solid;
     transition: all .4s;
@@ -66,7 +63,7 @@ h1{
     text-align: center;
     color: #eee;
     font-family: Fira Code;
-    background-color: #2f2e2e;
+    background-color: #2f2d2d;
 }
 .rec{
     margin: 0;padding: 0;
@@ -98,18 +95,18 @@ h1{
     color: #eee;
     padding: 3px 15px 5px;
     font-family: Bad Script;
-    background-color: #272626;
+    background-color: #222020;
     margin-bottom: 0;
 }
 ul{
     padding: 0;
     margin: 0;
-    background-color: #272626;
+    background-color: #222020;
     color: #ccc;
     font-family: Fira Code;
     font-size: 13px;
     font-weight: 100;
-    padding-bottom: 10px;
+    padding: 10px 0;
     list-style: none;
 
     
@@ -119,7 +116,7 @@ li{
     padding-left: 10px;
 }
 li:hover{
-    background-color: #242323;
+    background-color: #292727;
 }
 @media(max-width: 620px) {
     .main{
@@ -144,7 +141,7 @@ li:hover{
     width: 100%;
     text-align: center;
     border-radius: 0 0 2.4px 2.4px;
-    background-color: #2f2e2e;
+    background-color: #292727;
     font-family: Fira Code;
     font-weight: 100;
     transition: all .4s;
@@ -183,6 +180,8 @@ li:hover{
 </style>
 </head>
 <body>
+    <div id="nojs">Включите пожалуйста Javascript</div>  
+
     <header>
 
         <div class="logo logo-desktop" onclick="window.location='/'">Мира ♡</div>
@@ -190,12 +189,12 @@ li:hover{
 
 
         <div class="list-tab list-tab-desktop">
-            <div class="l-cmd l-item" onclick="window.location='/help/'">Команды ✎</div>
+            <div class="l-cmd l-item" onclick="window.location='/help/'">Команды ♢</div>
             <div class="l-inv l-item l-i-active" onclick="window.location='/invite/'">Пригласить ★</div>
             <div class="l-api l-item" onclick="window.location='/api/'">API ⌘</div>
         </div>
         <div class="list-tab list-tab-mobile">
-            <div class="l-cmd l-item" onclick="window.location='/help/'">✎</div>
+            <div class="l-cmd l-item" onclick="window.location='/help/'">♢</div>
             <div class="l-inv l-item l-i-active" onclick="window.location='/invite/'">★</div>
             <div class="l-api l-item" onclick="window.location='/api/'">⌘</div>
         </div>
@@ -228,8 +227,9 @@ li:hover{
                 <div class="add add-full"><a target="_blank" class="add-t add-full" href="/api/redirect/?to=https://discord.com/api/oauth2/authorize?client_id=766313121194967080&permissions=1529846557910&scope=bot"> Пригласить </a></div>
             </div>
         </div>
-        <!-- <div class="minimal"><a class="minimal" href="minimal/"> Добавить с минимальными разрешениями </a> <p href="" class="minimal nrec">(не рекомендуется)</p></div> -->
         
     </section>
+<script src="/js/load.js"></script>
+
 </body>
 </html>

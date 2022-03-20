@@ -6,76 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мира ♡</title>
 <link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/header.css">
 <style>
-body{
-    margin: 0;padding: 0;
-    background-color: #1b1a1a;
-}
-header{
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    background-color: #000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    font-family: Fira Code ,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    top: 0;
-
-
-
-}
-.logo-mobile{
-    display: none;
-}
-.logo{
-    margin: 0;
-    padding: 13px 20px;
-    color: #ff8282;
-    transition: all .3s;
-    border-bottom: rgba(0,0,0,0) 2px solid;
-
-}
-#logo-active{
-    border-bottom: #ff8282 2px solid;
-
-}
-.logo:hover{
-    color: #000;
-    background-color: #ff8282;
-
-}
-.list-tab{
-    display: flex;
-    color: #eee;
-}
-.l-item{
-    padding: 13px 20px;
-    transition: all .3s;
-    border-bottom: rgba(0,0,0,0) 2px solid;
-
-}
-.l-i-active{
-    border-bottom: #fff 2px solid;
-
-}
-.l-item:hover{
-    color: #000;
-    background-color: #fff;
-}
-
-
-.list-tab-mobile{
-        display: none;
-    }
-
-
-
-.main {
-    padding-top: 50px;
-}
 
 
 
@@ -84,7 +17,7 @@ header{
     display: flex;
     height: 400px;
     background: #232222;
-    margin: 10px;
+    margin: 15px;
     border-radius: 10px;
 
     display: grid;
@@ -165,24 +98,6 @@ code {
     display: none;
 }
 @media(max-width: 609px) {
-    .logo-mobile{
-        display: block;
-    }
-    .logo-desktop{
-        display: none;
-    }
-    .logo{
-        padding: 13px 19px;
-    }
-    .list-tab-desktop{
-        display: none;
-    }
-    .list-tab-mobile{
-        display: flex;
-    }
-    .l-cmd{
-        padding: 13px 21.7px;
-    }
     .mira-dsc{
         display: none;
     }
@@ -214,6 +129,7 @@ code {
 </style>
 </head>
 <body>
+    <div id="nojs">Включите пожалуйста Javascript</div>  
     <header>
 
         <div class="logo logo-desktop" id="logo-active" onclick="window.location='/'">Мира ♡</div>
@@ -221,12 +137,12 @@ code {
 
 
         <div class="list-tab list-tab-desktop">
-            <div class="l-cmd l-item" onclick="window.location='/help/'">Команды ✎</div>
+            <div class="l-cmd l-item" onclick="window.location='/help/'">Команды ♢</div>
             <div class="l-inv l-item" onclick="window.location='/invite/'">Пригласить ★</div>
             <div class="l-api l-item" onclick="window.location='/api/'">API ⌘</div>
         </div>
         <div class="list-tab list-tab-mobile">
-            <div class="l-cmd l-item" onclick="window.location='/help/'">✎</div>
+            <div class="l-cmd l-item" onclick="window.location='/help/'">♢</div>
             <div class="l-inv l-item" onclick="window.location='/invite/'">★</div>
             <div class="l-api l-item" onclick="window.location='/api/'">⌘</div>
         </div>
@@ -248,10 +164,12 @@ code {
         </div>
 
         <div class="mobile-fastbuttons">
-            <div class="mfb mfb-commands">Команды ✎</div>
-            <div class="mfb mfb-invite">Пригласить ★</div>
+            <div class="mfb mfb-commands" onclick="window.location='/help/'">Команды ♢</div>
+            <div class="mfb mfb-invite" onclick="window.location='/invite/'">Пригласить ★</div>
 
         </div>
     </section>
+<script src="/js/load.js"></script>
+
 </body>
 </html>
