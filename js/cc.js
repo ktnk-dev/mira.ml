@@ -9,3 +9,6 @@ an.innerHTML = "@ktnk-dev"
 
 author.appendChild(an)
 document.getElementsByTagName('body')[0].appendChild(author)
+
+qq = document.getElementsByClassName('main-text')[0] 
+qq.innerHTML = "ну что? как тебе такое? шило в маске?"
