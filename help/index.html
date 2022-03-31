@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мира ♡</title>
+    <title>Мира ♡ / Команды</title>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="stylesheet" href="/css/header.css">
 <style>
@@ -251,7 +251,7 @@
         </div>
         
     </header>
-    <div id="nojs">Включите пожалуйста Javascript</div>  
+    <a href="/js_policy/" id="nojs">Включите пожалуйста Javascript</a>  
     <section class="main">
         <div class="help">
 
@@ -279,12 +279,12 @@ if (ishelp == false){
         for (let j = 0; j < commands[category].length; j++) {
             
             const cmd_d = commands[category][j];
-            console.log(`${cmd_d[0]} -- ${cmd_d[1]}`);
+            console.log(`${cmd_d[0].replaceAll(' _',commands.cfg.prefix)} -- ${cmd_d[1]}`);
 
             cmd = document.createElement('div')
             cmd.classList.add('cmd')
             c_name = document.createElement('div')
-            c_name.classList.add('cmdi', 'name'); c_name.innerHTML = cmd_d[0]
+            c_name.classList.add('cmdi', 'name'); c_name.innerHTML = cmd_d[0].replaceAll(' _',commands.cfg.prefix)
             c_descr = document.createElement('div')
             c_descr.classList.add('cmdi','descr'); c_descr.innerHTML = cmd_d[1]
 

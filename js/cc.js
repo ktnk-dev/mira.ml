@@ -9,4 +9,3 @@ an.innerHTML = "@ktnk-dev"
 
 author.appendChild(an)
 document.getElementsByTagName('body')[0].appendChild(author)
-

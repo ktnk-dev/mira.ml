@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мира ♡ / Политика JS</title>
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/header.css">
+
+<style>
+body{
+    margin: 0;padding: 0;
+    background-color: #1b1a1a;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.ttl{
+    margin: 30px 5px 0;
+    text-align: center;
+    font-family: Fira Code;
+    color: #eee;
+    font-weight: 100;
+    font-size: 20px;
+
+}
+.ttd{
+    margin: 30px 30px 10px;
+    font-family: Fira Code;
+    color: #ccc;
+    font-weight: 100;
+    font-size: 17px;
+    border-left: var(--lbc) 2px solid;
+    padding: 10px 0;
+    padding-left: 20px;
+
+}
+
+underline{
+    text-decoration: underline;
+}
+
+a{
+    color: #888;
+    text-decoration: none;
+}
+dmn{
+    background-color: rgba(0,0,0,0.7);
+    margin: 0;
+    /* margin-left: 0; */
+    padding: 2px 7px;
+    border-radius: 5px;
+    color: #bbb;
+
+}
+</style>
+</head>
+<body>
+    <a href="/js_policy/" id="nojs">Включите пожалуйста Javascript</a>  
+    <header>
+
+        <div class="logo logo-desktop" onclick="window.location='/'">Мира ♡</div>
+        <div class="logo logo-mobile" onclick="window.location='/'">♡</div>
+
+
+        <div class="list-tab list-tab-desktop">
+            <div class="l-cmd l-item" onclick="window.location='/help/'">Команды ♢</div>
+            <div class="l-inv l-item" onclick="window.location='/invite/'">Пригласить ★</div>
+            <div class="l-api l-item" onclick="window.location='/api/'">API ⌘</div>
+        </div>
+        <div class="list-tab list-tab-mobile">
+            <div class="l-cmd l-item" onclick="window.location='/help/'">♢</div>
+            <div class="l-inv l-item" onclick="window.location='/invite/'">★</div>
+            <div class="l-api l-item" onclick="window.location='/api/'">⌘</div>
+        </div>
+        
+    </header>
+    <section class="main">    
+        <h1 class="ttl">Вы попали на эту страницу, ведь у вас отключен Javascript. </h1>
+        <h2 class="ttd" style="--lbc: #717171">Исходный код сайта <underline>полностью</underline> открыт. Ознакомиться с ним можно здесь: <a href="https://github.com/ktnk-dev/mira.ml"><dmn>GitHub</dmn> /ktnk-dev/mira.ml/</a></underline></h2>
+        <h2 class="ttd" style="--lbc: #ff8282">Мы НЕ используем Javascript для какой-либо аналитики, НЕ изучаем ваше поведение на сайте, НЕ логгируем ваши действия на сайте, и <underline>НИКОГДА НЕ ПЕРЕДАЕМ И НЕ СОХРАНЯЕМ КАКУЮ-ЛИБО ИНФОРМАЦИЮ, СВЯЗАННУЮ С ВАМИ</underline>.</h2>
+        <h2 class="ttd" style="--lbc: #8282ff">Мы используем шрифты, которые хранятся на серверах <dmn>Google</dmn>. Во время разработки сайта, мы указали <underline>прямые</underline> ссылки на шрифты, то есть - никаких Javascript скриптов от <dmn>Google</dmn> просто не может быть. Ознакомиться с файлом, где прописаны шрифты, можно здесь: <a href="/css/fonts.css"><dmn>Мира ♡</dmn> /css/fonts.css</a></underline></h2>
+        
+    </section>
+<script src="/js/load.js"></script>
+
+</body>
+</html>
